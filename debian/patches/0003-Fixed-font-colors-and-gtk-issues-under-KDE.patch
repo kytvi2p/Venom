@@ -1,0 +1,105 @@
+From: gcarq <gcarq@yahoo.com>
+Date: Sun, 10 Aug 2014 23:11:45 +0200
+Subject: Fixed font colors and gtk issues under KDE
+
+---
+ src/ui/ChatMessage.vala        | 10 ++++++----
+ src/ui/ConversationWidget.vala |  2 +-
+ src/ui/conversation_window.ui  |  2 +-
+ theme/default.css              | 18 +++++++++---------
+ 4 files changed, 17 insertions(+), 15 deletions(-)
+
+diff --git a/src/ui/ChatMessage.vala b/src/ui/ChatMessage.vala
+index b098389..8cfda90 100644
+--- a/src/ui/ChatMessage.vala
++++ b/src/ui/ChatMessage.vala
+@@ -26,12 +26,14 @@ namespace Venom {
+     public ChatMessage(IMessage message, bool short_names, bool following, int offset){
+       init_widgets();
+ 
++      if( message.message_direction == MessageDirection.OUTGOING ) {
++        name_label.get_style_context().add_class("own_name");  
++        message_label.get_style_context().add_class("own_message");
++      }
++      
+       if( message.is_action ) {
+         name_label.set_text( message.get_sender_plain() );
+-      } else if(!following) {
+-        if(message.message_direction == MessageDirection.OUTGOING) {
+-          name_label.get_style_context().add_class("own_name");
+-        }
++      } else if(!following) {  
+         if(short_names) {
+           name_label.set_text( Tools.shorten_name( message.get_sender_plain() ) );
+         } else {
+diff --git a/src/ui/ConversationWidget.vala b/src/ui/ConversationWidget.vala
+index 2cc3979..3650309 100644
+--- a/src/ui/ConversationWidget.vala
++++ b/src/ui/ConversationWidget.vala
+@@ -324,4 +324,4 @@ namespace Venom {
+       add_filetransfer(ft);
+     }
+   }
+-}
+\ No newline at end of file
++}
+diff --git a/src/ui/conversation_window.ui b/src/ui/conversation_window.ui
+index b670738..1018d6b 100644
+--- a/src/ui/conversation_window.ui
++++ b/src/ui/conversation_window.ui
+@@ -118,7 +118,7 @@
+                     <property name="xalign">0</property>
+                     <property name="label">#Statusmessage</property>
+                     <property name="use_markup">True</property>
+-                    <property name="ellipsize">end</property>
++                    <property name="ellipsize">end</property>                  
+                   </object>
+                   <packing>
+                     <property name="expand">False</property>
+diff --git a/theme/default.css b/theme/default.css
+index b21ba69..4af5fbd 100644
+--- a/theme/default.css
++++ b/theme/default.css
+@@ -188,13 +188,6 @@
+   background-color: @treeview-background;
+ }
+ 
+-.contact_list .frame {
+-  border: 0px solid @border-color;
+-  border-top-width: 1px;
+-  border-bottom-width: 1px;
+-  padding: 0px;
+-}
+-
+ .contact_list GtkTreeView {
+   background-color: @treeview-background;
+ }
+@@ -260,6 +253,9 @@ GtkEventBox,
+   border-color: @separator-color;
+ }
+ 
++.conversation_widget GtkLabel {
++  color: #000000;
++}
+ 
+ .conversation_widget .callbutton:insensitive,
+ .conversation_widget .callbutton:insensitive:insensitive {
+@@ -352,7 +348,12 @@ GtkEventBox,
+   border-radius: 7px;
+ }
+ 
+-.message_entry .own_name {
++.message_entry {
++  color: #000000;
++}
++
++.message_entry .own_name,
++.message_entry .own_message {
+   color: #939598;
+ }
+ 
+@@ -378,4 +379,3 @@ GtkEventBox,
+ .filetransfer_entry .fileinfo{
+   color: #d5d5d5;
+ }
+-

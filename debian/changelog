@@ -1,0 +1,6 @@
+venom (0.2.0+20141010.r621-1) unstable; urgency=low
+
+  * Initial release
+  * Apply pull request from https://github.com/naxuroqa/Venom/pull/232
+
+ -- Kill Your TV <killyourtv@i2pmail.org>  Fri, 10 Oct 2014 13:29:40 +0000

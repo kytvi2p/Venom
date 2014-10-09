@@ -1,0 +1,23 @@
+Source: venom
+Section: net
+Priority: optional
+Maintainer: Kill Your TV <killyourtv@i2pmail.org>
+Build-Depends: debhelper (>= 9), cmake (>= 2.8.7),
+ ,valac (>= 0.18.1)
+ ,libgtk-3-dev (>= 3.4)
+ ,libjson-glib-dev (>= 0.14)
+ ,libsqlite3-dev (>= 3.7.0)
+ ,libnotify-dev (>= 0.7.3)
+ ,libqrencode-dev (>= 3.1.1)
+ ,libtoxcore-dev
+ ,libtoxencryptsave-dev
+ ,libtoxdns-dev
+Standards-Version: 3.9.6
+Homepage: https://github.com/naxuroqa/Venom
+
+Package: venom
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Tox Client written in GTK+/Vala
+ Venom is a cross-platform graphical user interface for Tox written in Vala
+ using GTK+.

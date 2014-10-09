@@ -1,0 +1,6 @@
+#!/usr/bin/make -f
+
+VALAFLAGS:=$(foreach w,$(CPPFLAGS) $(CFLAGS) $(LDFLAGS),-X $(w))
+
+%:
+	dh $@ --parallel

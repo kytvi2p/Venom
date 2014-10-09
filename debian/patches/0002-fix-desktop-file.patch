@@ -1,0 +1,20 @@
+From: Kill Your TV <killyourtv@i2pmail.org>
+Date: Fri, 10 Oct 2014 11:48:35 +0000
+Subject: fix desktop file
+
+---
+ misc/venom.desktop.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/misc/venom.desktop.in b/misc/venom.desktop.in
+index bed6297..5dd6fca 100644
+--- a/misc/venom.desktop.in
++++ b/misc/venom.desktop.in
+@@ -6,6 +6,6 @@ Comment=A GTK+/Vala GUI for Tox
+ TryExec=venom
+ Exec=venom %u
+ Icon=venom
+-Categories=InstantMessaging;Network;AudioVideo;GTK;
++Categories=InstantMessaging;Network;VideoConference;Telephony;
+ Terminal=false
+ MimeType=x-scheme-handler/tox;

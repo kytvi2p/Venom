@@ -1,0 +1,21 @@
+From: Kill Your TV <killyourtv@i2pmail.org>
+Date: Thu, 9 Oct 2014 00:36:32 +0000
+Subject: fix build with newer valac
+
+---
+ src/ui/AboutDialog.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/ui/AboutDialog.vala b/src/ui/AboutDialog.vala
+index b6c87c6..db259cc 100644
+--- a/src/ui/AboutDialog.vala
++++ b/src/ui/AboutDialog.vala
+@@ -38,7 +38,7 @@ namespace Venom {
+         "stqism <sean@tox.im>",
+         null
+       };
+-      this.add_credit_section("Packagers", (string) packagers);
++      this.add_credit_section("Packagers", packagers);
+       comments = Config.SHORT_DESCRIPTION;
+       copyright = Config.COPYRIGHT_NOTICE;
+       license_type = Gtk.License.GPL_3_0;
