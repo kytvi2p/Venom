@@ -1,3 +1,9 @@
+venom (0.2.0+20141010.r621-1ubuntu2) trusty; urgency=medium
+
+  * Ubuntu's valac is old enough to not be patched; disabling patch #1
+
+ -- Kill Your TV <killyourtv@i2pmail.org>  Sat, 11 Oct 2014 17:11:48 +0000
+
 venom (0.2.0+20141010.r621-1ubuntu1) trusty; urgency=medium
 
   * Upload to PPA
