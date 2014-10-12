@@ -1,4 +1,4 @@
-0001-fix-build-with-newer-valac.patch
+#0001-fix-build-with-newer-valac.patch
 0002-fix-desktop-file.patch
 0003-Fixed-font-colors-and-gtk-issues-under-KDE.patch
 0004-fixed-bug-to-render-dialogs-properly-with-oxygen-gtk.patch

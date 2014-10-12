@@ -1,3 +1,14 @@
+venom (0.2.0+20141012.r622-1) unstable; urgency=medium
+
+  [ naxuroqa ]
+  * added gtk+-3.0 vapi and deps file from vala 0.26, updated authors section
+    (included all contributors with > 1 commit of code)
+
+  [ Kill Your TV ]
+  * New git upstream snapshot
+
+ -- Kill Your TV <killyourtv@i2pmail.org>  Sun, 12 Oct 2014 17:25:32 +0000
+
 venom (0.2.0+20141010.r621-1) unstable; urgency=low
 
   * Initial release
