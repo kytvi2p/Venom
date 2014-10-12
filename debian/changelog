@@ -1,14 +1,13 @@
-venom (0.2.0+20141010.r621-1ubuntu2) trusty; urgency=medium
+venom (0.2.0+20141012.r622-1) unstable; urgency=medium
 
-  * Ubuntu's valac is old enough to not be patched; disabling patch #1
+  [ naxuroqa ]
+  * added gtk+-3.0 vapi and deps file from vala 0.26, updated authors section
+    (included all contributors with > 1 commit of code)
 
- -- Kill Your TV <killyourtv@i2pmail.org>  Sat, 11 Oct 2014 17:11:48 +0000
+  [ Kill Your TV ]
+  * New git upstream snapshot
 
-venom (0.2.0+20141010.r621-1ubuntu1) trusty; urgency=medium
-
-  * Upload to PPA
-
- -- Kill Your TV <killyourtv@i2pmail.org>  Sat, 11 Oct 2014 00:46:07 +0000
+ -- Kill Your TV <killyourtv@i2pmail.org>  Sun, 12 Oct 2014 17:25:32 +0000
 
 venom (0.2.0+20141010.r621-1) unstable; urgency=low
 
