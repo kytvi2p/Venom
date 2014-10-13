@@ -4,3 +4,8 @@ VALAFLAGS:=$(foreach w,$(CPPFLAGS) $(CFLAGS) $(LDFLAGS),-X $(w))
 
 %:
 	dh $@ --parallel
+
+
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DENABLE_LIBNOTIFY=TRUE -DENABLE_QR_ENCODE=TRUE

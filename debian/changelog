@@ -1,8 +1,9 @@
-venom (0.2.0+20141012.r622-1ubuntu1) trusty; urgency=medium
+venom (0.2.0+20141012.r622-2) unstable; urgency=medium
 
-  * Build for Trusty
+  * Actually set -DENABLE_LIBNOTIFY=TRUE -DENABLE_QR_ENCODE=TRUE so they'll be
+    used.
 
- -- Kill Your TV <killyourtv@i2pmail.org>  Sun, 12 Oct 2014 18:13:26 +0000
+ -- Kill Your TV <killyourtv@i2pmail.org>  Mon, 13 Oct 2014 12:39:52 +0000
 
 venom (0.2.0+20141012.r622-1) unstable; urgency=medium
 
