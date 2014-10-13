@@ -1,3 +1,10 @@
+venom (0.2.0+20141012.r622-2) unstable; urgency=medium
+
+  * Actually set -DENABLE_LIBNOTIFY=TRUE -DENABLE_QR_ENCODE=TRUE so they'll be
+    used.
+
+ -- Kill Your TV <killyourtv@i2pmail.org>  Mon, 13 Oct 2014 12:39:52 +0000
+
 venom (0.2.0+20141012.r622-1) unstable; urgency=medium
 
   [ naxuroqa ]
